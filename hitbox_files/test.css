@@ -1,0 +1,5187 @@
+body {
+  background-color: #121212;
+  touch-action: none;
+  font-family: "Bai Jamjuree";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #ebebeb;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #303030 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #303030 inset !important;
+  color: #ebebeb;
+  -webkit-text-fill-color: #ebebeb;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("./fonts/BaiJamjuree-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("./fonts/BaiJamjuree-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("./fonts/BaiJamjuree-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("./fonts/BaiJamjuree-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("./fonts/BaiJamjuree-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("./fonts/BaiJamjuree-BoldItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("./fonts/BaiJamjuree-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+button {
+  padding: 0.2em;
+  background-color: #585858;
+  border: 1px solid #6c6c6c;
+  color: white;
+}
+button:hover {
+  background-color: #405664;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #616570;
+  border-radius: 19px;
+}
+
+#email {
+  position: absolute;
+  right: 10px;
+  color: #5d5d5d;
+}
+
+#songcredit {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  color: #5d5d5d;
+}
+#songcredit a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#appContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 10px solid #0a0a0a;
+  display: block;
+  width: 1120px; /* ... */
+  height: 700px;
+  overflow: hidden;
+}
+
+#relativeContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: 1120px;
+  height: 700px;
+  pointer-events: none;
+}
+
+select {
+  margin: 0.5em;
+  padding: 0.2em;
+  background-color: #3d5874;
+  border: 1px solid #4a7ab1;
+  color: white;
+}
+
+select:focus {
+  outline: none;
+}
+
+.touchInputs {
+  position: absolute;
+  width: 40%;
+  bottom: 30px;
+  height: 130px;
+  pointer-events: all;
+  display: none;
+}
+.touchInputs .actions {
+  float: left;
+  transform: rotate(5deg);
+  display: none;
+}
+.touchInputs .arrows {
+  position: absolute;
+  left: -100px;
+  transform: rotate(-5deg);
+}
+.touchInputs .groupBox {
+  height: 100%;
+}
+.touchInputs .groupBox .upper {
+  height: 50%;
+  position: relative;
+}
+.touchInputs .groupBox .upper .key {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.touchInputs .groupBox .lower {
+  height: 50%;
+}
+.touchInputs .groupBox .key {
+  width: 100px;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: red;
+  display: inline-block;
+}
+
+.mainLogo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 45%;
+  top: 22%;
+}
+
+.mainLogoTopLeft {
+  position: absolute;
+  left: 0;
+  width: 60%;
+  top: 1%;
+  z-index: -1;
+}
+
+#backgroundImage {
+  background-image: url(graphics/ui/bh4.jpg);
+  background-size: 100%;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.cornerButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.cornerButton.left {
+  left: 15px;
+  right: unset;
+}
+.cornerButton .square {
+  width: 29px;
+  height: 29px;
+  transform: rotate(-28deg);
+  background-color: #4a7ab1;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+.cornerButton .square.left {
+  left: 0px;
+  right: unset;
+}
+.cornerButton .square:hover {
+  background-color: #5c85b4;
+}
+.cornerButton .square .icon {
+  background-image: url(graphics/ui/menu.svg);
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(28deg);
+}
+.cornerButton .square .icon.opened {
+  background-image: url(graphics/ui/close.svg);
+}
+.cornerButton .items {
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  width: 150px;
+  text-align: right;
+}
+.cornerButton .items.left {
+  left: 0px;
+  right: unset;
+  text-align: left;
+}
+.cornerButton .items .item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+}
+.cornerButton .items .item.disabled {
+  cursor: initial;
+  pointer-events: none;
+  color: #333333;
+}
+.cornerButton .items .item:hover {
+  font-weight: 600;
+  margin-right: -1px;
+}
+
+.letterbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 99999px solid black;
+  width: 5000px;
+  height: 5000px;
+  z-index: 999;
+  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.blocker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  pointer-events: none;
+  display: none;
+  background-color: black;
+}
+
+#logoImageM {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#ccLogo {
+  position: absolute;
+  width: 40%;
+  left: 11%;
+  top: 8%;
+  pointer-events: none;
+}
+
+.ccPlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 2%;
+  background: url("graphics/ui/cc_play_g1.png");
+  background-size: contain;
+  width: 30%;
+  height: 25%;
+  cursor: pointer;
+}
+.ccPlay:active:hover {
+  background: url("graphics/ui/cc_play_hover_g1.png");
+  background-size: contain;
+}
+
+#ccLoading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 3px 3px 2px #171717;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainLogoTest {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -1%;
+  right: 11%;
+  font-size: 100px;
+  color: hsl(332.92, 82.76%, 65.88%);
+  font-weight: 900;
+  font-style: italic;
+  text-align: right;
+  text-shadow: 1px 1px 1px #000, 1px 2px 1px #000, 1px 3px 1px #000, 1px 4px 1px #000, 1px 5px 1px #000, 1px 6px 1px #000, 1px 7px 1px #000, 1px 8px 1px #000, 1px 9px 1px #000, 1px 10px 1px #000, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+.mainLogoTest.io {
+  color: #d0d0d0;
+  font-size: 38px;
+  right: 7%;
+  top: 8.2%;
+  filter: drop-shadow(-3px 0px 0px #000);
+}
+
+#topStatusDiv {
+  color: #121212;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  right: 0px;
+}
+#topStatusDiv:hover {
+  color: white;
+}
+
+#buttonDiv {
+  position: absolute;
+}
+
+#pixiContainer {
+  display: none;
+  position: absolute;
+}
+
+.mainMenuFancy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+}
+.mainMenuFancy .rightContainer {
+  position: absolute;
+  right: 21%;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  zoom: 0.8;
+}
+.mainMenuFancy .rightContainer .logo {
+  position: absolute;
+  top: 13%;
+  margin-left: 84px;
+  width: 410px;
+}
+.mainMenuFancy .rightContainer .bigButton {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  pointer-events: all;
+  font-weight: 900;
+}
+.mainMenuFancy .rightContainer .bigButton.qp {
+  bottom: 295px;
+  margin-left: 24px;
+}
+.mainMenuFancy .rightContainer .bigButton.custom {
+  bottom: 185px;
+  margin-left: 17px;
+}
+.mainMenuFancy .rightContainer .bigButton.training {
+  bottom: 75px;
+}
+.mainMenuFancy .rightContainer .bigButton .bg {
+  height: 80px;
+  background-color: #4a7ab1;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 5px 5px #111111;
+  transform: scaleY(1.2) rotate(2deg);
+  cursor: pointer;
+}
+.mainMenuFancy .rightContainer .bigButton .bg:hover {
+  background-color: #5a8ac1;
+}
+.mainMenuFancy .rightContainer .bigButton .bg.qp {
+  width: 440px;
+  transform: scaleY(1.2) rotate(2.5deg);
+}
+.mainMenuFancy .rightContainer .bigButton .bg.custom {
+  width: 550px;
+}
+.mainMenuFancy .rightContainer .bigButton .bg.training {
+  width: 585px;
+  transform: scaleY(1.2) rotate(1.3deg);
+}
+.mainMenuFancy .rightContainer .bigButton .text {
+  color: #eeeeee;
+  font-size: 67px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 76px;
+  transform: rotate(2.8deg);
+  pointer-events: none;
+  text-shadow: 6px 6px #375a83;
+}
+.mainMenuFancy .rightContainer .bigButton .text .bigger {
+  font-size: 72px;
+}
+.mainMenuFancy .rightContainer .bigButton .text.training {
+  transform: rotate(2.1deg);
+}
+.mainMenuFancy .bottomBar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.mainMenuFancy .bottomBar .thin {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  bottom: 0;
+}
+.mainMenuFancy .bottomBar .thick {
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 28px;
+  width: 57px;
+}
+.mainMenuFancy .bottomBar .thick .slope {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-bottom: 20px solid #fff;
+  border-right: 10px solid white;
+  position: absolute;
+  left: -35px;
+  top: 0;
+}
+.mainMenuFancy .bottomBar .credit {
+  height: 27px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #b3a862;
+  text-align: left;
+  padding-left: 24px;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 95px;
+}
+.mainMenuFancy .bottomBar .credit .bg {
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+}
+.mainMenuFancy .bottomBar .credit .bg .solid {
+  background-color: #000;
+  height: 27px;
+}
+.mainMenuFancy .bottomBar .credit .bg .slope {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-bottom: 20px solid #000000;
+  border-right: 10px solid black;
+  position: absolute;
+  left: -35px;
+  top: 0;
+}
+.mainMenuFancy .bottomBar .credit .actual {
+  position: absolute;
+}
+.mainMenuFancy .bottomBar .credit .widthSetter {
+  visibility: hidden;
+}
+.mainMenuFancy .bottomBar .skipButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 21px;
+  height: 18px;
+  position: absolute;
+  bottom: 5px;
+  background-size: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(graphics/ui/chevron_right.svg);
+  pointer-events: all;
+}
+.mainMenuFancy .bottomBar .skipButton:hover {
+  background-color: #5c85b4;
+}
+.mainMenuFancy .bottomBar .skipButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.mainMenuFancy .bottomBar .skipButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.mainMenuFancy .bottomBar .skipButton.prev {
+  transform: rotate(180deg);
+  right: 34px;
+}
+.mainMenuFancy .bottomBar .skipButton.next {
+  right: 6px;
+}
+.mainMenuFancy .topBar, .mainMenuFancy .mapListContainer .mapList .topBar, .mapListContainer .mapList .mainMenuFancy .topBar, .mainMenuFancy .passwordWindowContainer .passwordWindow .topBar, .passwordWindowContainer .passwordWindow .mainMenuFancy .topBar, .mainMenuFancy .roomListContainer .roomList .topBar, .roomListContainer .roomList .mainMenuFancy .topBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.mainMenuFancy .topBar .thin {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  top: 0;
+}
+.mainMenuFancy .topBar .thick {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 32px;
+  width: 120px;
+}
+.mainMenuFancy .topBar .thick .slope {
+  width: 0;
+  height: 0;
+  border-right: 45px solid transparent;
+  border-top: 30px solid #fff;
+  border-left: 10px solid white;
+  position: absolute;
+  right: -45px;
+  bottom: 0;
+}
+.mainMenuFancy .topBar .tickerBG {
+  width: 100%;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.6980392157);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mainMenuFancy .topBar .tickerBG .tickerContainer {
+  position: absolute;
+  color: #b3a862;
+  font-size: 17px;
+  font-weight: 900;
+  font-style: italic;
+  margin-top: 3px;
+}
+.mainMenuFancy .topBar .tickerBG .text {
+  white-space: nowrap;
+  padding-left: 160px;
+}
+
+.mainMenu .menu1 .bgSquare {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  background-color: #000000;
+  width: 230px;
+  height: 230px;
+  opacity: 0.8;
+}
+.mainMenu .menu1 .centerContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 210px;
+  justify-content: space-between;
+}
+.mainMenu .menu1 .centerContainer .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  height: 50px;
+  line-height: 50px;
+  width: 200px;
+}
+.mainMenu .menu1 .centerContainer .button:hover {
+  background-color: #5c85b4;
+}
+.mainMenu .menu1 .centerContainer .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.mainMenu .menu1 .centerContainer .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.quickMapDisplay {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 150px;
+  height: 200px;
+}
+.quickMapDisplay .element {
+  display: inline-block;
+  position: absolute;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  width: 160px;
+  height: 100px;
+  border: 1px solid #191818;
+  cursor: pointer;
+  background: #2e2f31;
+  vertical-align: top;
+  padding: 5px;
+}
+.quickMapDisplay .element .thumbImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.physicsCountWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -35px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #2c2e32;
+  font-size: 14px;
+}
+
+#editorContainer {
+  display: none;
+  position: absolute;
+}
+#editorContainer #editorButtonsDiv {
+  margin-top: 6px;
+}
+#editorContainer .topMenu {
+  height: 28px;
+  line-height: 28px;
+  background-color: #2c2e32;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #ebebeb;
+  font-size: 15px;
+  cursor: default;
+}
+#editorContainer .topMenu .topLabel {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  position: relative;
+}
+#editorContainer .topMenu .topLabel:hover {
+  background-color: #3d4046;
+}
+#editorContainer .topMenu .container {
+  position: absolute;
+  left: 0px;
+  top: 28px;
+  display: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3215686275);
+  width: -moz-max-content;
+  width: max-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #27292c;
+}
+#editorContainer .topMenu .container .item {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #27292c;
+  cursor: pointer;
+}
+#editorContainer .topMenu .container .item:hover {
+  background-color: #323438;
+}
+#editorContainer .topMenu .container .item.disabled {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
+}
+#editorContainer .topInsideNotification {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  text-align: center;
+  display: none;
+  font-size: 15px;
+  background-color: #2c2e32;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: #2c2e32;
+  color: #ebebeb;
+  height: 28px;
+  line-height: 28px;
+}
+#editorContainer .sideBar {
+  display: grid;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background-color: #2c2e32;
+  color: #ebebeb;
+}
+#editorContainer .sideBar .entitySubBar {
+  position: absolute;
+  background-color: #2c2e32;
+  color: #ebebeb;
+  top: 216px;
+  left: 36px;
+  display: grid;
+}
+#editorContainer .sideBar .button {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+#editorContainer .sideBar .button .tooltip {
+  position: absolute;
+  left: 40px;
+  top: 6px;
+  display: none;
+  background-color: #2c2e32;
+  padding: 5px;
+  font-size: 12px;
+  height: 13px;
+  line-height: 13px;
+  border-radius: 2px;
+  width: -moz-max-content;
+  width: max-content;
+}
+#editorContainer .sideBar .button:hover {
+  background-color: #3d4046;
+}
+#editorContainer .sideBar .button.selected {
+  outline: 1px solid #939393;
+  outline-offset: -3px;
+}
+#editorContainer .sideBar .button.selectBody {
+  background-image: url(graphics/ui/cursor-default-outline.svg);
+}
+#editorContainer .sideBar .button.selectShape {
+  background-image: url(graphics/ui/arrow-top-left-thin-circle-outline.svg);
+}
+#editorContainer .sideBar .button.square {
+  background-image: url(graphics/ui/crop-square.svg);
+}
+#editorContainer .sideBar .button.circle {
+  background-image: url(graphics/ui/checkbox-blank-circle-outline.svg);
+}
+#editorContainer .sideBar .button.poly {
+  background-image: url(graphics/ui/vector-triangle.svg);
+}
+#editorContainer .sideBar .button.spawn {
+  background-image: url(graphics/ui/vanish.svg);
+}
+#editorContainer .sideBar .button.pickup {
+  background-image: url(graphics/ui/flash.svg);
+}
+#editorContainer .sideBar .button.teamCore {
+  background-image: url(graphics/ui/castle.svg);
+}
+#editorContainer .sideBar .button.turret {
+  background-image: url(graphics/ui/chess-rook.svg);
+}
+#editorContainer .sideBar .button.grapple {
+  background-image: url(graphics/ui/cross-circle-outline.svg);
+}
+#editorContainer .sideBar .button.fill {
+  background-image: url(graphics/ui/format-color-fill.svg);
+}
+#editorContainer .sideBar .button.cap {
+  background-image: url(graphics/ui/flag-variant-outline.svg);
+}
+#editorContainer .sideBar .button.scenery {
+  background-image: url(graphics/ui/pine-tree-variant-outline.svg);
+  background-color: #2c2e32;
+  left: 36px;
+  width: 26px;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: 84%;
+  outline-offset: -2px;
+}
+#editorContainer .sideBar .button.scenery:hover {
+  background-color: #3d4046;
+}
+#editorContainer .sideBar .sideLabel {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+#editorContainer .sideBar .preview {
+  width: 26px;
+  height: 26px;
+  border: solid 2px #bababa;
+  background-color: #cc5555;
+  margin-left: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#editorContainer .sideBar .strokeColorPreview {
+  margin-bottom: 4px;
+}
+#editorContainer .sideBar .texPreview {
+  background-color: #6190d4;
+  background-size: 400%;
+  margin-bottom: 5px;
+}
+#editorContainer .sideBar .bgTexPreview {
+  background-size: 100%;
+  margin-bottom: 6px;
+}
+#editorContainer .sideBar .texScaleKnob {
+  margin-top: 4px;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  cursor: default;
+}
+#editorContainer .sideBar .bgTintPreview {
+  margin-bottom: 6px;
+}
+#editorContainer .sideBar input {
+  background: none;
+  border: none;
+  color: #ebebeb;
+  width: 36px;
+  text-align: center;
+  font-size: 10px;
+}
+#editorContainer .sideBar .colorWheelContainer {
+  width: 235px;
+  height: 235px;
+  position: absolute;
+  left: 35px;
+  background-color: #2c2e32;
+  bottom: 0px;
+  display: none;
+  cursor: default;
+}
+#editorContainer .sideBar .textureContainer {
+  position: absolute;
+  left: 35px;
+  bottom: 0px;
+  background-color: #2c2e32;
+  cursor: default;
+  display: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#editorContainer .sideBar .textureContainer .scrollContainer {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 378px;
+}
+#editorContainer .sideBar .textureContainer .footer {
+  padding: 7px;
+  width: 213px;
+  margin-left: 9px;
+}
+#editorContainer .sideBar .textureContainer .paramContainer {
+  position: relative;
+  display: inline-block;
+  width: 67px;
+  height: 65px;
+  background-color: #35383d;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+#editorContainer .sideBar .textureContainer .paramContainer .label {
+  text-align: center;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
+#editorContainer .sideBar .textureContainer .paramContainer .input {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 49px;
+}
+#editorContainer .sideBar .textureContainer .paramContainer .paramKnob {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 26px;
+}
+#editorContainer .sideBar .textureContainer .paramContainer .paramColorBox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #bababa;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 26px;
+  cursor: pointer;
+}
+#editorContainer .sideBar .textureContainer .bgColorWheel {
+  width: 235px;
+  height: 235px;
+  position: absolute;
+  right: 0px;
+  background-color: #2c2e32;
+  bottom: 77px;
+  display: none;
+  cursor: default;
+}
+#editorContainer .sideBar .textureContainer .elementContainer {
+  padding: 5px;
+  background-color: #35383d;
+  margin-bottom: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 4px;
+  border-radius: 2px;
+  width: 360px;
+}
+#editorContainer .sideBar .textureContainer .elementContainer.smaller {
+  width: 270px;
+}
+#editorContainer .sideBar .textureContainer .elementContainer.selected {
+  background-color: #535962;
+  outline: 1px solid #7d8495;
+  outline-offset: -1px;
+}
+#editorContainer .sideBar .textureContainer .elementContainer .label {
+  font-size: 12px;
+  padding-bottom: 4px;
+  padding-left: 1px;
+}
+#editorContainer .sideBar .textureContainer .elementContainer .imageContainer {
+  padding: 1px;
+  width: 225px;
+  height: 50px;
+  overflow: hidden;
+}
+#editorContainer .sideBar .textureContainer .elementContainer .squareImageContainer {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+}
+#editorContainer .sideBar .textureContainer .elementContainer .squareImageContainer:hover {
+  background-color: #3d4046;
+}
+#editorContainer .sideBar .textureContainer .elementContainer .squareImageContainer.selected {
+  background-color: #4a7ab1;
+}
+#editorContainer .sideBar .textureContainer .elementContainer .squareImage {
+  height: 100%;
+}
+
+#ytContainer {
+  display: none;
+}
+
+.topBar, .mapListContainer .mapList .topBar, .passwordWindowContainer .passwordWindow .topBar, .roomListContainer .roomList .topBar {
+  height: 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  line-height: 34px;
+  color: #ebebeb;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 17px;
+  padding-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: 600;
+}
+
+.behindBlocker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.3);
+  width: 1px;
+  height: 1px;
+}
+
+.blockerContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.crossButton, .postGameContainer .crossButton, .mapListContainer .closeButton, .replayViewer .closeButton {
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-image: url(graphics/ui/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  background-color: #4a7ab1;
+  cursor: pointer;
+}
+.crossButton:hover, .mapListContainer .closeButton:hover, .replayViewer .closeButton:hover {
+  background-color: #5c85b4;
+}
+
+.roomListContainer {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.roomListContainer .flexPadding {
+  height: 100%;
+  flex-basis: 10px;
+  flex-grow: 1;
+}
+.roomListContainer .flexPaddingCenter {
+  flex-basis: 730px;
+  flex-grow: 1;
+  position: relative;
+}
+.roomListContainer .flexPaddingCenter .crossButtonTopFix {
+  top: calc(13% - 19px);
+}
+.roomListContainer .roomList {
+  position: relative;
+  top: calc(13% - 10px);
+  height: 68%;
+  background-color: #262626;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.roomListContainer .roomList .topBar {
+  height: 40px;
+  line-height: 40px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.roomListContainer .roomList .status {
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 16px;
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+}
+.roomListContainer .roomList .jukeThumb {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 150px;
+  height: 112px;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+.roomListContainer .roomList .friendsPopup {
+  display: none;
+  position: absolute;
+  left: 35px;
+  background-size: cover;
+  pointer-events: none;
+  background-color: hsl(0, 0%, 25%);
+  padding: 6px;
+  border-radius: 2px;
+}
+.roomListContainer .roomList .friendsPopup .title {
+  font-size: 16px;
+}
+.roomListContainer .roomList .friendsPopup .entry {
+  font-size: 13px;
+}
+.roomListContainer .roomList .tableHeader {
+  width: calc(100% - 10px);
+  height: 18px;
+  line-height: 19px;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  background-color: #191919;
+  color: #3c3c3c;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+.roomListContainer .roomList .tableHeader .element {
+  display: inline-block;
+  box-sizing: border-box;
+}
+.roomListContainer .roomList .tableHeader .sideFiller {
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: -15px;
+  top: 0px;
+  background-color: #191919;
+}
+.roomListContainer .roomList .scrollBox {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100% - 68px);
+  width: 100%;
+  top: 68px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.roomListContainer .roomList .scrollBox table {
+  width: 100%;
+  text-align: center;
+  color: #d5d5d5;
+  border-collapse: collapse;
+  font-size: 15px;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+.roomListContainer .roomList .scrollBox table td {
+  height: 30px;
+  cursor: pointer;
+}
+.roomListContainer .roomList .scrollBox table tr:nth-child(odd) {
+  background-color: rgba(58, 58, 58, 0.13);
+}
+.roomListContainer .roomList .scrollBox table .SELECTED, .roomListContainer .roomList .scrollBox table .SELECTED:hover {
+  background-color: #49575c !important;
+}
+.roomListContainer .roomList .scrollBox table .FRIENDSPRESENT {
+  background-color: #333f37 !important;
+}
+.roomListContainer .roomList .scrollBox table tr:hover {
+  background-color: #3f4c50;
+}
+.roomListContainer .bottomButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  top: 81%;
+}
+.roomListContainer .bottomButton:hover {
+  background-color: #5c85b4;
+}
+.roomListContainer .bottomButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.roomListContainer .bottomButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.roomListContainer .left {
+  left: 0;
+}
+.roomListContainer .right {
+  right: 0;
+}
+.roomListContainer .middle {
+  right: 100px;
+}
+.roomListContainer .news {
+  left: 100px;
+}
+
+.editorPropertiesWindow {
+  position: absolute;
+  display: grid;
+  background: #2c2e32;
+  color: #e7e7e7;
+  width: 250px;
+  cursor: auto;
+  border-radius: 3px;
+}
+.editorPropertiesWindow .topBar, .editorPropertiesWindow .mapListContainer .mapList .topBar, .mapListContainer .mapList .editorPropertiesWindow .topBar, .editorPropertiesWindow .passwordWindowContainer .passwordWindow .topBar, .passwordWindowContainer .passwordWindow .editorPropertiesWindow .topBar, .editorPropertiesWindow .roomListContainer .roomList .topBar, .roomListContainer .roomList .editorPropertiesWindow .topBar {
+  height: 30px;
+  cursor: grab;
+  line-height: 30px;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: unset;
+}
+.editorPropertiesWindow .topBar .closeButton {
+  position: absolute;
+  top: -2px;
+  right: 5px;
+  cursor: pointer;
+}
+.editorPropertiesWindow .topBar .minimizeButton {
+  position: absolute;
+  top: -3px;
+  right: 25px;
+  cursor: pointer;
+}
+.editorPropertiesWindow .filterContainer {
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.editorPropertiesWindow .filterContainer input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 75%;
+  margin-top: 4px;
+  text-align: center;
+}
+.editorPropertiesWindow .filterContainer .label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 75%;
+  margin-top: 6px;
+  pointer-events: none;
+  font-size: 14px;
+  opacity: 0.3;
+  text-align: center;
+}
+.editorPropertiesWindow .contentDiv {
+  overflow-y: scroll;
+  max-height: 500px;
+  min-height: 200px;
+}
+.editorPropertiesWindow .contentDiv .categoryDiv {
+  font-weight: bold;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+.editorPropertiesWindow .contentDiv .categoryDivHidden {
+  overflow: hidden;
+  height: 20px;
+}
+.editorPropertiesWindow .contentDiv .categoryLabel {
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: #b5b5b5;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.editorPropertiesWindow .row {
+  display: grid;
+  padding: 0.5em;
+}
+.editorPropertiesWindow .row .title {
+  font-weight: bold;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+.editorPropertiesWindow .row .subtitle {
+  padding: 0.5em;
+  font-size: 0.75em;
+  color: #b5b5b5;
+}
+.editorPropertiesWindow .row.indent {
+  margin-left: 12px;
+}
+.editorPropertiesWindow .row.bgalt {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.editorPropertiesWindow .row button {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.editorPropertiesWindow input, .editorPropertiesWindow select {
+  margin: 0.5em;
+  padding: 0.2em;
+  background-color: #585858;
+  border: 1px solid #6c6c6c;
+  color: white;
+}
+.editorPropertiesWindow input::-moz-selection {
+  background: #a7a7a7;
+}
+.editorPropertiesWindow input::selection {
+  background: #a7a7a7;
+}
+.editorPropertiesWindow hr {
+  width: 95%;
+  border: none;
+  height: 1px;
+  color: #6c6c6c;
+  background-color: #6c6c6c;
+}
+.editorPropertiesWindow .colorPreview {
+  width: 210px;
+  height: 25px;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+.editorPropertiesWindow .wheelContainer {
+  display: none;
+  padding-bottom: 1em;
+}
+.editorPropertiesWindow .colorPalette {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.editorPropertiesWindow .colorPalette .colorPaletteBox {
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+.editorPropertiesWindow input:focus,
+.editorPropertiesWindow select:focus,
+.editorPropertiesWindow textarea:focus,
+.editorPropertiesWindow button:focus {
+  outline: none;
+}
+
+.passwordWindowContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 270px;
+  height: 180px;
+}
+.passwordWindowContainer .passwordWindow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #25262a;
+  pointer-events: auto !important;
+  border-radius: 7px;
+}
+.passwordWindowContainer .passwordWindow .topBar {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.passwordWindowContainer .passwordWindow .label {
+  position: absolute;
+  left: 20px;
+  top: 48px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  color: #c3c3c3;
+}
+.passwordWindowContainer .passwordWindow .joinButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+}
+.passwordWindowContainer .passwordWindow .joinButton:hover {
+  background-color: #5c85b4;
+}
+.passwordWindowContainer .passwordWindow .joinButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.passwordWindowContainer .passwordWindow .joinButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.passwordWindowContainer .passwordWindow input {
+  width: 200px;
+  padding: 4px;
+  font-size: 14px;
+  background: #303030;
+  border: 1px solid #222222;
+  color: #ebebeb;
+  text-align: left;
+  font-family: "Bai Jamjuree";
+  position: absolute;
+  left: 20px;
+  top: 70px;
+}
+.passwordWindowContainer .passwordWindow input:focus:focus-visible {
+  outline: 1px solid #6c6c6c;
+}
+.passwordWindowContainer .passwordWindow input::-moz-selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.passwordWindowContainer .passwordWindow input::selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+
+.createWindowContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 270px;
+  height: 328px;
+  z-index: 2;
+}
+.createWindowContainer .createWindow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #25262a;
+  pointer-events: auto !important;
+  border-radius: 7px;
+}
+.createWindowContainer .label {
+  position: absolute;
+  color: #c3c3c3;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  left: 20px;
+}
+.createWindowContainer .nameLabel {
+  top: 47px;
+}
+.createWindowContainer .passwordLabel {
+  top: 104px;
+}
+.createWindowContainer .maxPlayersLabel {
+  top: 161px;
+}
+.createWindowContainer input {
+  width: 200px;
+  padding: 4px;
+  font-size: 14px;
+  background: #303030;
+  border: 1px solid #222222;
+  color: #ebebeb;
+  text-align: left;
+  font-family: "Bai Jamjuree";
+  position: absolute;
+  left: 20px;
+}
+.createWindowContainer input:focus:focus-visible {
+  outline: 1px solid #6c6c6c;
+}
+.createWindowContainer input::-moz-selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.createWindowContainer input::selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.createWindowContainer .nameField {
+  top: 69px;
+}
+.createWindowContainer .passwordField {
+  top: 126px;
+}
+.createWindowContainer .maxPlayersField {
+  top: 183px;
+}
+.createWindowContainer .unlistedLabel {
+  left: 30px;
+  width: 140px;
+  top: 1px;
+  font-size: 15px;
+}
+.createWindowContainer .unlistedCheckContainer {
+  top: 228px;
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+}
+.createWindowContainer .bottomButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 15px;
+  height: 40px;
+  line-height: 40px;
+}
+.createWindowContainer .bottomButton:hover {
+  background-color: #5c85b4;
+}
+.createWindowContainer .bottomButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.createWindowContainer .bottomButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.createWindowContainer .createButton {
+  left: 20px;
+}
+
+.connectingWindowContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 305px;
+  height: 175px;
+}
+.connectingWindowContainer .connectingWindow {
+  background-color: #25262a;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  position: relative;
+}
+.connectingWindowContainer .connectingWindow .textBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #ebebeb;
+  font-size: 14px;
+  padding: 5px;
+  width: 250px;
+  height: 60px;
+  top: 50px;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  white-space: pre;
+}
+.connectingWindowContainer .connectingWindow .cancelButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  bottom: 10px;
+}
+.connectingWindowContainer .connectingWindow .cancelButton:hover {
+  background-color: #5c85b4;
+}
+.connectingWindowContainer .connectingWindow .cancelButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.connectingWindowContainer .connectingWindow .cancelButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.autoLoginWindowContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 305px;
+  height: 175px;
+}
+.autoLoginWindowContainer .autoLoginWindow {
+  background-color: #25262a;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  position: relative;
+}
+.autoLoginWindowContainer .autoLoginWindow .textBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #ebebeb;
+  font-size: 14px;
+  padding: 5px;
+  width: 250px;
+  height: 40px;
+  top: 70px;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  white-space: pre;
+}
+.autoLoginWindowContainer .autoLoginWindow .cancelButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  bottom: 10px;
+}
+.autoLoginWindowContainer .autoLoginWindow .cancelButton:hover {
+  background-color: #5c85b4;
+}
+.autoLoginWindowContainer .autoLoginWindow .cancelButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.autoLoginWindowContainer .autoLoginWindow .cancelButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.lobbyContainer {
+  width: 730px;
+  height: 510px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  resize: both;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+}
+.lobbyContainer .topBar, .lobbyContainer .mapListContainer .mapList .topBar, .mapListContainer .mapList .lobbyContainer .topBar, .lobbyContainer .roomListContainer .roomList .topBar, .roomListContainer .roomList .lobbyContainer .topBar, .lobbyContainer .passwordWindowContainer .passwordWindow .topBar, .passwordWindowContainer .passwordWindow .lobbyContainer .topBar {
+  font-weight: 300;
+}
+.lobbyContainer .playerBox {
+  background-color: #25262a;
+  width: 64%;
+  height: 35%;
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  border-radius: 7px;
+}
+.lobbyContainer .playerBox .middleLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: calc(100% - 58px);
+  width: 1px;
+  border-left: 2px solid #323232;
+  top: 34px;
+}
+.lobbyContainer .playerBox .elementContainer {
+  width: 100%;
+  height: calc(100% - 40px);
+  position: absolute;
+  bottom: 0;
+  overflow-y: auto;
+}
+.lobbyContainer .playerBox .elementContainer .sideContainer {
+  width: calc(50% - 6px);
+  height: 100%;
+}
+.lobbyContainer .playerBox .elementContainer .sideContainer.left {
+  float: left;
+  padding-left: 4px;
+}
+.lobbyContainer .playerBox .elementContainer .sideContainer.right {
+  float: right;
+  padding-right: 4px;
+}
+.lobbyContainer .playerBox .ffaButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 100px;
+  height: 24px;
+  line-height: 24px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -30px;
+}
+.lobbyContainer .playerBox .ffaButton:hover {
+  background-color: #5c85b4;
+}
+.lobbyContainer .playerBox .ffaButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.lobbyContainer .playerBox .ffaButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.lobbyContainer .playerBox .teamsButtonContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -30px;
+}
+.lobbyContainer .playerBox .teamsButtonContainer .teamButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 110px;
+  height: 24px;
+  line-height: 24px;
+}
+.lobbyContainer .playerBox .teamsButtonContainer .teamButton:hover {
+  background-color: #5c85b4;
+}
+.lobbyContainer .playerBox .teamsButtonContainer .teamButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.lobbyContainer .playerBox .teamsButtonContainer .teamButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.lobbyContainer .teamLockButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 16px;
+  height: 35px;
+  border-radius: 2px;
+  position: absolute;
+  background-image: url(graphics/ui/lock-outline.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  top: 17%;
+  right: calc(33.5% - 8px);
+}
+.lobbyContainer .teamLockButton:hover {
+  background-color: #5c85b4;
+}
+.lobbyContainer .teamLockButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.lobbyContainer .teamLockButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.lobbyContainer .teamLockButton.unlockedClient {
+  pointer-events: none;
+  cursor: auto;
+  opacity: 0.7;
+  filter: saturate(20%);
+}
+.lobbyContainer .teamLockButton.lockedClient {
+  pointer-events: none;
+  cursor: auto;
+  background-color: #be4242;
+}
+.lobbyContainer .teamLockButton.lockedHost {
+  background-color: #be4242;
+}
+.lobbyContainer .teamLockButton.lockedHost:hover {
+  background-color: #cc6464;
+}
+.lobbyContainer .specBox {
+  background-color: #25262a;
+  width: 31%;
+  height: 35%;
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  border-radius: 7px;
+}
+.lobbyContainer .specBox .elementContainer {
+  width: 100%;
+  height: calc(100% - 40px);
+  position: absolute;
+  bottom: 0;
+  overflow-y: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  box-sizing: border-box;
+}
+.lobbyContainer .specBox .specButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 100px;
+  height: 24px;
+  line-height: 24px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -30px;
+}
+.lobbyContainer .specBox .specButton:hover {
+  background-color: #5c85b4;
+}
+.lobbyContainer .specBox .specButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.lobbyContainer .specBox .specButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.lobbyContainer .chatBox {
+  background-color: #25262a;
+  width: 58%;
+  height: 55.5%;
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  border-radius: 7px;
+}
+.lobbyContainer .chatBox .lowerLine {
+  border-top: 1px solid #a5acb0;
+  width: 97%;
+  height: 25px;
+  bottom: 0px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.lobbyContainer .chatBox .lowerInstruction {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 97%;
+  height: 21px;
+  bottom: 0px;
+  color: #656565;
+  font-size: 13px;
+  pointer-events: none;
+}
+.lobbyContainer .chatBox .input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 97%;
+  height: 26px;
+  bottom: 0px;
+  border: 0px solid;
+  background: none;
+  font-size: 14px;
+  color: #d7d7d7;
+  pointer-events: none;
+  font-family: "Bai Jamjuree";
+}
+.lobbyContainer .chatBox .input.touch {
+  pointer-events: auto;
+}
+.lobbyContainer .chatBox .input:focus {
+  outline: none;
+}
+.lobbyContainer .chatBox .input::-moz-selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.lobbyContainer .chatBox .input::selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.lobbyContainer .chatBox .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: calc(100% - 24px - 44px);
+  top: 40px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  word-break: break-word;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+  padding: 6px;
+  /*scrollbar-width: thin; /*firefox*/
+  font-size: 14px;
+}
+.lobbyContainer .chatBox .content .name {
+  color: #d9d9d9;
+}
+.lobbyContainer .chatBox .content .message {
+  color: #b1b1b1;
+}
+.lobbyContainer .chatBox .content .messageContainer {
+  margin-bottom: 2px;
+}
+.lobbyContainer .chatBox .content .statusContainer {
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.lobbyContainer .chatBox .content .iconContainer {
+  position: relative;
+  display: inline;
+  margin-right: 13px;
+}
+.lobbyContainer .chatBox .content .iconContainer .box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 7px;
+  height: 7px;
+  transform: rotate(-28deg);
+}
+.lobbyContainer .chatBox .content .status {
+  color: rgb(112, 169, 255);
+}
+.lobbyContainer .chatBox .content .status.jukeStatus {
+  color: #dfa032;
+}
+.lobbyContainer .chatBox .content .status.jukeStatus.title {
+  font-style: italic;
+}
+.lobbyContainer .chatBox .content .status.jukeStatus.link {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(112, 169, 255);
+}
+.lobbyContainer .chatBox .content .status.mapSuggest {
+  color: #3acaf2;
+}
+.lobbyContainer .chatBox .content .status.mapSuggest.title {
+  font-style: italic;
+}
+.lobbyContainer .chatBox .content .status.mapSuggest.link {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(112, 169, 255);
+}
+.lobbyContainer .settingsBox {
+  background-color: #25262a;
+  width: 38%;
+  height: 55.5%;
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+  border-radius: 7px;
+}
+.lobbyContainer .settingsBox .mapPreviewContainer {
+  position: absolute;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: calc(100% - 175px);
+  top: 47px;
+  width: 90%;
+}
+.lobbyContainer .settingsBox .mapPreviewContainer img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+.lobbyContainer .settingsBox .mapTextContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  height: calc(100% - 175px);
+  text-align: center;
+  top: 47px;
+  justify-content: center;
+  background-color: rgba(37, 38, 42, 0.7);
+  opacity: 0;
+  overflow: hidden;
+}
+.lobbyContainer .settingsBox .mapTextContainer:hover {
+  opacity: 1;
+}
+.lobbyContainer .settingsBox .mapTextContainer .name {
+  font-size: 16px;
+}
+.lobbyContainer .settingsBox .mapTextContainer .author {
+  font-size: 14px;
+}
+.lobbyContainer .settingsBox .mapTextContainer .votes {
+  font-size: 14px;
+}
+.lobbyContainer .settingsBox .mapTextContainer .age {
+  font-size: 13px;
+}
+.lobbyContainer .settingsBox .mapTextContainer .description {
+  font-size: 13px;
+  overflow: hidden;
+}
+.lobbyContainer .settingsBox .mapTextContainer .timesButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 25px;
+  height: 25px;
+  background-image: url(graphics/ui/timer-outline.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 80%;
+}
+.lobbyContainer .settingsBox .mapTextContainer .timesButton:hover {
+  background-color: #5c85b4;
+}
+.lobbyContainer .settingsBox .mapTextContainer .timesButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.lobbyContainer .settingsBox .mapTextContainer .timesButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.lobbyContainer .settingsBox .mapTextContainer .fav {
+  position: absolute;
+  top: 55px;
+  right: 45px;
+  font-size: 15px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.lobbyContainer .settingsBox .mapTextContainer .fav.favd {
+  opacity: 1;
+}
+.lobbyContainer .settingsBox .settingsButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  width: calc(50% - 22px);
+  overflow: hidden;
+}
+.lobbyContainer .settingsBox .settingsButton:hover {
+  background-color: #5c85b4;
+}
+.lobbyContainer .settingsBox .settingsButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.lobbyContainer .settingsBox .settingsButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.lobbyContainer .settingsBox .startButton {
+  right: 15px;
+  bottom: 15px;
+}
+.lobbyContainer .settingsBox .mapButton {
+  left: 15px;
+  bottom: 15px;
+}
+.lobbyContainer .settingsBox .endGameButton {
+  left: 15px;
+  bottom: 15px;
+  width: calc(100% - 30px);
+}
+.lobbyContainer .settingsBox .hideLobbyButton {
+  right: 15px;
+  bottom: 55px;
+}
+.lobbyContainer .settingsBox .editorButton {
+  right: 15px;
+  bottom: 55px;
+}
+.lobbyContainer .settingsBox .cosmeticsButton {
+  left: 15px;
+  bottom: 55px;
+}
+.lobbyContainer .settingsBox .disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.lobbyContainer .settingsBox .linkButton {
+  right: 15px;
+  top: 14px;
+  width: 27px;
+  height: 27px;
+  border-radius: 2px;
+  background-image: url(graphics/ui/share-variant-outline.svg);
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  background-size: 80%;
+}
+.lobbyContainer .settingsBox .modeContainer {
+  position: absolute;
+  bottom: 116px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 250px;
+  font-size: 14px;
+}
+.lobbyContainer .settingsBox .modeContainer .timedText {
+  position: absolute;
+  left: 0;
+  text-align: right;
+  width: 40%;
+}
+.lobbyContainer .settingsBox .modeContainer .practiceText {
+  position: absolute;
+  right: 0;
+  width: 40%;
+}
+.lobbyContainer .settingsBox .modeDropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 95px;
+  width: 173px;
+  text-align: center;
+  border-radius: 2px;
+  font-family: "Bai Jamjuree";
+}
+.lobbyContainer .settingsBox .modeDropdown.disabled {
+  pointer-events: none;
+}
+.lobbyContainer .settingsBox .modeDropdown.left {
+  width: 170px;
+  left: -70px;
+}
+.lobbyContainer .settingsBox .modeDropdown.right {
+  width: 57px;
+  right: -182px;
+}
+.lobbyContainer .playerElement {
+  height: 42px;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+  vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.02);
+  margin-bottom: 4px;
+}
+.lobbyContainer .playerElement .name {
+  color: #ebebeb;
+  position: absolute;
+  left: 42px;
+  top: 2px;
+  pointer-events: none;
+}
+.lobbyContainer .playerElement .level {
+  color: #959595;
+  position: absolute;
+  left: 42px;
+  bottom: 2px;
+  pointer-events: none;
+}
+.lobbyContainer .playerElement .debugIcon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+.lobbyContainer .playerElement .debugIcon .box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-28deg);
+}
+.lobbyContainer .playerElement .typingIcon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  display: none;
+  background-image: url(graphics/ui/typing.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  left: 26px;
+}
+.lobbyContainer .playerElement .editorIcon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  display: none;
+  background-image: url(graphics/ui/wrench.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  left: 26px;
+}
+.lobbyContainer .playerElement .friendRequestIcon {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  display: none;
+  background-image: url(graphics/ui/account-question.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  left: 26px;
+  top: 22px;
+}
+.lobbyContainer .playerElement .pingText {
+  position: absolute;
+  right: 7px;
+  bottom: 2px;
+  color: #ebebeb;
+  font-size: 11px;
+}
+.lobbyContainer .playerElement .pingText.highPing {
+  color: #ff9f9f;
+}
+.lobbyContainer .playerElement .hostText {
+  position: absolute;
+  right: 7px;
+  top: 4px;
+  color: #ebebeb;
+  font-size: 11px;
+  text-align: right;
+}
+
+.inGameChat {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: auto;
+  width: 422px;
+  height: 138px;
+  overflow: hidden;
+  display: none;
+  pointer-events: none;
+  font-size: 15px;
+}
+.inGameChat.smaller {
+  font-size: 10px;
+}
+.inGameChat .content {
+  position: absolute;
+  bottom: 27px;
+  left: 5px;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+}
+.inGameChat .content .iconContainer {
+  position: relative;
+  display: inline;
+  margin-left: 1px;
+  margin-right: 12px;
+}
+.inGameChat .content .iconContainer .box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 7px;
+  height: 7px;
+  transform: rotate(-28deg);
+}
+.inGameChat .content .name {
+  display: inline;
+  color: rgba(227, 227, 227, 0.6274509804);
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgba(37, 38, 42, 0.768627451);
+  border-radius: 3px;
+  margin-right: 3px;
+}
+.inGameChat .content .message {
+  display: inline;
+  color: rgba(235, 235, 235, 0.8705882353);
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgba(37, 38, 42, 0.7490196078);
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.inGameChat .content .message.link {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  pointer-events: all;
+}
+.inGameChat .content div {
+  margin-top: 4px;
+}
+.inGameChat .input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 98%;
+  height: 24px;
+  color: #ffffff;
+  border: 0px;
+  padding: 0px;
+  padding-left: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "Bai Jamjuree";
+}
+.inGameChat .input:focus {
+  outline: none;
+}
+.inGameChat .bgActive {
+  background-color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.guestWindow {
+  width: 250px;
+  height: 190px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #25262a;
+  color: #ebebeb;
+  border-radius: 7px;
+}
+.guestWindow .backButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -100px;
+  background-image: url(graphics/ui/arrow-left.svg);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.guestWindow .backButton:hover {
+  background-color: #5c85b4;
+}
+.guestWindow .backButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.guestWindow .backButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.guestWindow .nameLabel {
+  position: absolute;
+  left: 20px;
+  top: 54px;
+  font-size: 14px;
+  color: #c3c3c3;
+}
+.guestWindow .nameInput {
+  width: 200px;
+  padding: 4px;
+  font-size: 14px;
+  background: #303030;
+  border: 1px solid #222222;
+  color: #ebebeb;
+  text-align: left;
+  font-family: "Bai Jamjuree";
+  top: 83px;
+  width: 180px;
+  position: absolute;
+  left: 20px;
+  top: 78px;
+}
+.guestWindow .nameInput:focus:focus-visible {
+  outline: 1px solid #6c6c6c;
+}
+.guestWindow .nameInput::-moz-selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.guestWindow .nameInput::selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.guestWindow .playButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  bottom: 15px;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 20px;
+}
+.guestWindow .playButton:hover {
+  background-color: #5c85b4;
+}
+.guestWindow .playButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.guestWindow .playButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.guestOrAccountWindow {
+  width: 700px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+}
+.guestOrAccountWindow .guestBox {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 185px;
+  width: 300px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.guestOrAccountWindow .accountBox {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 185px;
+  width: 300px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.guestOrAccountWindow .label {
+  width: 258px;
+  height: 68px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50px;
+  font-size: 14px;
+  padding: 7px;
+  text-align: left;
+}
+.guestOrAccountWindow .label span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+  white-space: pre;
+}
+.guestOrAccountWindow .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  height: 40px;
+  line-height: 40px;
+  width: 150px;
+  position: absolute;
+  left: 18px;
+  bottom: 15px;
+}
+.guestOrAccountWindow .button:hover {
+  background-color: #5c85b4;
+}
+.guestOrAccountWindow .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.guestOrAccountWindow .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.guestOrAccountWindow .buttonLarger {
+  width: 170px;
+}
+
+.accountWindow {
+  width: 660px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 15px;
+}
+.accountWindow .backButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -100px;
+  background-image: url(graphics/ui/arrow-left.svg);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.accountWindow .backButton:hover {
+  background-color: #5c85b4;
+}
+.accountWindow .backButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.accountWindow .backButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.accountWindow .subWindow {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 300px;
+  height: 275px;
+  background-color: #25262a;
+  color: #ebebeb;
+  border-radius: 7px;
+}
+.accountWindow .loginWindow {
+  left: 0;
+}
+.accountWindow .registerWindow {
+  right: 0;
+}
+.accountWindow .fieldLabel {
+  position: absolute;
+  left: 20px;
+  color: #c3c3c3;
+}
+.accountWindow .usernameLabel {
+  top: 55px;
+}
+.accountWindow .passwordLabel {
+  top: 115px;
+}
+.accountWindow .bottomButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  bottom: 15px;
+  width: 150px;
+  position: absolute;
+  left: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+.accountWindow .bottomButton:hover {
+  background-color: #5c85b4;
+}
+.accountWindow .bottomButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.accountWindow .bottomButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.accountWindow input {
+  width: 200px;
+  padding: 4px;
+  font-size: 14px;
+  background: #303030;
+  border: 1px solid #222222;
+  color: #ebebeb;
+  text-align: left;
+  font-family: "Bai Jamjuree";
+  width: 206px;
+  position: absolute;
+  left: 20px;
+}
+.accountWindow input:focus:focus-visible {
+  outline: 1px solid #6c6c6c;
+}
+.accountWindow input::-moz-selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.accountWindow input::selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.accountWindow .usernameField {
+  top: 78px;
+}
+.accountWindow .passwordField {
+  top: 138px;
+}
+.accountWindow .rememberContainer {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  position: absolute;
+  left: 21px;
+  bottom: 71px;
+  cursor: pointer;
+}
+.accountWindow .rememberContainer .check {
+  background-color: #c3c3c3;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+}
+.accountWindow .rememberContainer .ticked {
+  background-image: url(graphics/ui/check.svg);
+  background-size: contain;
+}
+.accountWindow .rememberContainer .label {
+  display: inline-block;
+  margin-left: 8px;
+  margin-top: 1px;
+}
+.accountWindow .errorBox {
+  width: 450px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  color: #ebebeb;
+  background-color: #461414;
+  padding: 24px;
+  top: -60px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.jukebox {
+  position: absolute;
+  bottom: -50px;
+  height: 35px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+}
+.jukebox .circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background-image: url("./graphics/ui/juke3.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: -22px;
+}
+.jukebox .circle.off {
+  background-image: url("./graphics/ui/juke3-off.svg");
+}
+.jukebox .music {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 17px;
+  height: 17px;
+  right: 3px;
+  top: -10px;
+  background-image: url("./graphics/ui/music.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.jukebox .box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 35px;
+  line-height: 35px;
+  background-color: #25262a;
+  top: 0px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+}
+.jukebox .box .titleText {
+  font-family: "bai jamjuree";
+  font-weight: 500;
+  font-style: italic;
+  color: #ebebeb;
+  font-size: 12px;
+  height: 5px;
+  line-height: 5px;
+  margin-top: 15px;
+  margin-left: 13px;
+}
+.jukebox .box .titleText.hoverable:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.jukebox .box .timeText {
+  font-family: "bai jamjuree";
+  font-weight: 500;
+  font-style: italic;
+  color: #ebebeb;
+  font-size: 12px;
+  margin-left: 17px;
+  margin-right: 8px;
+  display: none;
+}
+.jukebox .box .playPause {
+  background-image: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+  margin-top: 6px;
+  margin-left: 8px;
+  display: block;
+  cursor: default;
+}
+.jukebox .box .playPause.play {
+  background-image: url("./graphics/ui/play.svg");
+}
+.jukebox .box .playPause.pause {
+  background-image: url("./graphics/ui/pause.svg");
+}
+.jukebox .box .playPause.hidden {
+  display: none;
+}
+.jukebox .box .playPause.active {
+  cursor: pointer;
+}
+.jukebox .box .volumeContainer {
+  margin-top: 8px;
+  margin-left: 15px;
+  margin-right: 13px;
+  position: relative;
+}
+
+.replayViewer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.replayViewer .creditText {
+  position: absolute;
+  text-align: right;
+  right: 0px;
+  bottom: 10px;
+}
+
+.singlePlayer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.singlePlayer .playButton {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 19.5%;
+  color: #e4c400;
+  font-weight: 600;
+  font-size: 31px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.631372549);
+  cursor: pointer;
+  background: url(graphics/ui/widebuttonblank.png);
+  background-size: contain;
+  width: 342px;
+  height: 75px;
+  line-height: 69px;
+  text-align: center;
+}
+.singlePlayer .playButton:active:hover {
+  background: url(graphics/ui/widebuttonblank.png);
+  background-size: contain;
+  line-height: 72px;
+}
+
+.twoButtonWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 175px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.twoButtonWindow .label {
+  position: absolute;
+  top: 51px;
+  font-size: 14px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.twoButtonWindow .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 20px;
+  width: 120px;
+}
+.twoButtonWindow .button:hover {
+  background-color: #5c85b4;
+}
+.twoButtonWindow .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.twoButtonWindow .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.twoButtonWindow .cancelButton {
+  left: 20px;
+}
+.twoButtonWindow .okButton {
+  right: 20px;
+}
+
+.oneButtonWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 175px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.oneButtonWindow .label {
+  position: absolute;
+  top: 51px;
+  font-size: 14px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.oneButtonWindow .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  width: 120px;
+}
+.oneButtonWindow .button:hover {
+  background-color: #5c85b4;
+}
+.oneButtonWindow .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.oneButtonWindow .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.recordsWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.4);
+  width: 490px;
+  height: 590px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.recordsWindow .mapTitle {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+}
+.recordsWindow .status {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+  text-align: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.recordsWindow .scrollContainer {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100% - 90px);
+  width: 100%;
+  top: 90px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.recordsWindow .scrollContainer table {
+  width: 100%;
+  text-align: center;
+  color: #d5d5d5;
+  border-collapse: collapse;
+  font-size: 15px;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+.recordsWindow .scrollContainer table td {
+  height: 30px;
+  cursor: pointer;
+}
+.recordsWindow .scrollContainer table tr:nth-child(odd) {
+  background-color: rgba(58, 58, 58, 0.13);
+}
+.recordsWindow .scrollContainer table .SELECTED, .recordsWindow .scrollContainer table .SELECTED:hover {
+  background-color: #49575c !important;
+}
+.recordsWindow .scrollContainer table tr:hover {
+  background-color: #3f4c50;
+}
+
+.settingsWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.4);
+  width: 490px;
+  height: 445px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.settingsWindow .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 15px;
+  width: 220px;
+}
+.settingsWindow .button:hover {
+  background-color: #5c85b4;
+}
+.settingsWindow .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.settingsWindow .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.settingsWindow .leftButton {
+  left: 15px;
+}
+.settingsWindow .rightButton {
+  right: 15px;
+}
+.settingsWindow .filterCheck {
+  position: absolute;
+  bottom: 66px;
+  left: 15px;
+  cursor: pointer;
+}
+.settingsWindow .filterLabel {
+  position: absolute;
+  bottom: 68px;
+  left: 45px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.settingsWindow .controlsTable {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid #4c4c4c;
+  border-collapse: collapse;
+  text-align: center;
+  width: 460px;
+  top: 65px;
+  font-size: 13px;
+  background-color: #202020;
+  box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.63);
+}
+.settingsWindow .controlsTable .darkerBG {
+  background-color: #474747;
+}
+.settingsWindow .controlsTable td {
+  border: 1px solid #363636;
+}
+.settingsWindow .controlsTable tr {
+  height: 30px;
+}
+.settingsWindow .controlsTable .clickable {
+  cursor: pointer;
+}
+.settingsWindow .controlsTable .clickable:hover {
+  background-color: #5c85b4;
+}
+
+.updateNews {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.4);
+  width: 375px;
+  height: 350px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.updateNews .textContent {
+  position: absolute;
+  top: 80px;
+  font-size: 14px;
+  padding-right: 20px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  height: 265px;
+  width: 355px;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+.updateNews .dateLabel {
+  position: absolute;
+  top: 45px;
+  font-size: 14px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.updateNews .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -43px;
+  width: 140px;
+}
+.updateNews .button:hover {
+  background-color: #5c85b4;
+}
+.updateNews .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.updateNews .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.updateNews .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  opacity: 0.7;
+  filter: saturate(20%);
+}
+.updateNews .leftButton {
+  left: 0px;
+}
+.updateNews .rightButton {
+  right: 0px;
+}
+
+.cosmeticWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 172px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.cosmeticWindow .optionsContainer {
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  width: 250px;
+}
+.cosmeticWindow .optionsContainer .singleContainer {
+  margin-bottom: 30px;
+  height: 30px;
+}
+.cosmeticWindow .optionsContainer .singleContainer .label {
+  color: #ebebeb;
+  float: left;
+  height: 100%;
+  line-height: 30px;
+}
+.cosmeticWindow .optionsContainer .singleContainer .colorBox {
+  width: 70px;
+  height: 100%;
+  background-color: red;
+  border: 2px solid #1c1c1c;
+  float: right;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.cosmeticWindow .colorWheelContainer {
+  width: 235px;
+  height: 235px;
+  position: absolute;
+  right: -235px;
+  background-color: #25262a;
+  bottom: 0px;
+  display: none;
+  cursor: default;
+}
+.cosmeticWindow .saveButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.cosmeticWindow .saveButton:hover {
+  background-color: #5c85b4;
+}
+.cosmeticWindow .saveButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.cosmeticWindow .saveButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.mapListContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  height: -moz-fit-content;
+  display: none;
+}
+.mapListContainer .enterNameWindow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  outline: 3000px solid rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 360px;
+  background-color: #25262a;
+  border-radius: 7px;
+}
+.mapListContainer .enterNameWindow .label {
+  position: absolute;
+  left: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #c3c3c3;
+}
+.mapListContainer .enterNameWindow .label.name {
+  top: 59px;
+}
+.mapListContainer .enterNameWindow .label.description {
+  top: 120px;
+}
+.mapListContainer .enterNameWindow .input {
+  width: 200px;
+  padding: 4px;
+  font-size: 14px;
+  background: #303030;
+  border: 1px solid #222222;
+  color: #ebebeb;
+  text-align: left;
+  font-family: "Bai Jamjuree";
+  position: absolute;
+  left: 20px;
+  width: 260px;
+  font-size: 14px;
+}
+.mapListContainer .enterNameWindow .input:focus:focus-visible {
+  outline: 1px solid #6c6c6c;
+}
+.mapListContainer .enterNameWindow .input::-moz-selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.mapListContainer .enterNameWindow .input::selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.mapListContainer .enterNameWindow .input.name {
+  top: 83px;
+}
+.mapListContainer .enterNameWindow .input.description {
+  top: 144px;
+  height: 100px;
+  resize: none;
+}
+.mapListContainer .enterNameWindow .input.publicPrivate {
+  top: 260px;
+  margin: 0;
+}
+.mapListContainer .enterNameWindow .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 20px;
+  width: 120px;
+}
+.mapListContainer .enterNameWindow .button:hover {
+  background-color: #5c85b4;
+}
+.mapListContainer .enterNameWindow .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.mapListContainer .enterNameWindow .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.mapListContainer .enterNameWindow .cancelButton {
+  left: 20px;
+}
+.mapListContainer .enterNameWindow .okButton {
+  right: 20px;
+}
+.mapListContainer .mapList {
+  width: 755px;
+  height: 550px;
+  background-color: #25262a;
+  pointer-events: auto !important;
+  resize: none; /* fix chrome triange bug, js sets resize now */
+  overflow: hidden;
+  border-radius: 7px;
+  outline: 3000px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.mapListContainer .mapList .greyBar {
+  width: 100%;
+  height: 40px;
+  background-color: #3f474e;
+  position: absolute;
+  top: 50px;
+}
+.mapListContainer .mapList .dropdownContainer {
+  position: absolute;
+  left: 10px;
+  top: 57px;
+  color: #ffffff;
+  height: 27px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 14px;
+}
+.mapListContainer .mapList .dropdownContainer .secondaryContainer {
+  position: absolute;
+  left: 166px;
+  top: 0px;
+}
+.mapListContainer .mapList .dropdownContainer .secondaryContainer .secondaryElement {
+  width: 166px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0509803922);
+  padding: 6px;
+  padding-left: 10px;
+  visibility: hidden;
+  background: #4a7ab1;
+}
+.mapListContainer .mapList .dropdownContainer .secondaryContainer .secondaryElement:hover {
+  background: #5c85b4;
+}
+.mapListContainer .mapList .dropdownContainer .secondaryContainer .secondaryElement.top {
+  padding-top: 4px;
+}
+.mapListContainer .mapList .dropdownContainer .secondaryContainer .secondaryElement.active {
+  visibility: inherit;
+}
+.mapListContainer .mapList .dropdownContainer .downArrow {
+  position: absolute;
+  right: 2px;
+  width: 16px;
+  top: 6px;
+  pointer-events: none;
+}
+.mapListContainer .mapList .dropdownContainer .element {
+  width: 150px;
+  padding: 6px;
+  padding-left: 10px;
+  background: #4a7ab1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0509803922);
+  position: relative;
+}
+.mapListContainer .mapList .dropdownContainer .element:hover {
+  background: #5c85b4;
+}
+.mapListContainer .mapList .dropdownContainer .element.forceHover {
+  background: #5c85b4;
+}
+.mapListContainer .mapList .dropdownContainer .element.disabled {
+  background: #555555;
+  cursor: initial;
+  display: none;
+}
+.mapListContainer .mapList .dropdownContainer .element.top {
+  padding-top: 4px;
+}
+.mapListContainer .mapList .dropdownContainer .element .rightArrow {
+  position: absolute;
+  right: 2px;
+  width: 16px;
+  top: 6px;
+  pointer-events: none;
+  transform: rotate(-90deg);
+}
+.mapListContainer .mapList .searchInput {
+  width: 200px;
+  padding: 4px;
+  font-size: 14px;
+  background: #303030;
+  border: 1px solid #222222;
+  color: #ebebeb;
+  text-align: left;
+  font-family: "Bai Jamjuree";
+  position: absolute;
+  right: 92px;
+  top: 59px;
+  width: 160px;
+  font-size: 15px;
+  height: 23px;
+  text-align: center;
+}
+.mapListContainer .mapList .searchInput:focus:focus-visible {
+  outline: 1px solid #6c6c6c;
+}
+.mapListContainer .mapList .searchInput::-moz-selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.mapListContainer .mapList .searchInput::selection {
+  background-color: #5e6a78;
+  color: #ffffff;
+}
+.mapListContainer .mapList .searchButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  position: absolute;
+  right: 9px;
+  top: 59px;
+  height: 23px;
+  width: 75px;
+  line-height: 23px;
+  font-size: 16px;
+  text-align: center;
+  font-size: 13px;
+}
+.mapListContainer .mapList .searchButton:hover {
+  background-color: #5c85b4;
+}
+.mapListContainer .mapList .searchButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.mapListContainer .mapList .searchButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.mapListContainer .mapList .searchOptions {
+  position: absolute;
+  right: 193px;
+  top: 53px;
+  width: 340px;
+  font-size: 12px;
+  display: none;
+}
+.mapListContainer .mapList .searchOptions .sortBy {
+  position: absolute;
+  top: 10px;
+  left: 23px;
+  cursor: pointer;
+}
+.mapListContainer .mapList .searchOptions .nameCheckContainer {
+  position: absolute;
+  left: 170px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.mapListContainer .mapList .searchOptions .authorCheckContainer {
+  position: absolute;
+  left: 170px;
+  top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.mapListContainer .mapList .searchOptions .checkLabel {
+  display: inline-block;
+  margin-left: 8px;
+  margin-top: 1px;
+}
+.mapListContainer .mapList .statusText {
+  text-align: center;
+  color: #ebebeb;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 30px;
+  line-height: 31px;
+  font-size: 15px;
+  background-color: #25262a;
+  border-bottom: 1px solid #414141;
+  border-top: 1px solid #414141;
+  display: none;
+}
+.mapListContainer .mapList .mapsContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 10px);
+  height: calc(100% - 108px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  bottom: 5px;
+}
+.mapListContainer .mapList .mapsContainer .pageIndicator {
+  display: block;
+  font-size: 14px;
+  padding-left: 7px;
+  padding-bottom: 13px;
+  padding-top: 5px;
+  text-align: center;
+}
+.mapListContainer .mapList .mapsContainer .noMoreIndicator {
+  display: block;
+  font-size: 14px;
+  padding-left: 7px;
+  padding-bottom: 13px;
+  padding-top: 1px;
+  text-align: center;
+}
+.mapListContainer .mapList .mapsContainer .element {
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  width: 160px;
+  height: 183px;
+  border: 1px solid #191818;
+  cursor: pointer;
+  background: #2e2f31;
+  vertical-align: top;
+  padding: 5px;
+}
+.mapListContainer .mapList .mapsContainer .element.newShiny {
+  box-shadow: inset 0 0 6px 0px rgba(0, 255, 239, 0.2509803922);
+}
+.mapListContainer .mapList .mapsContainer .element:hover {
+  background-color: #36373c;
+  border: 1px solid #5a5a5a;
+}
+.mapListContainer .mapList .mapsContainer .element.simulateHover {
+  background-color: #36373c;
+  border: 1px solid #5a5a5a;
+}
+.mapListContainer .mapList .mapsContainer .element.beenDeleted {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.mapListContainer .mapList .mapsContainer .element .title {
+  position: absolute;
+  color: #d6d6d6;
+  top: 7px;
+  white-space: pre;
+  text-align: center;
+  overflow: hidden;
+  font-size: 13px;
+  width: calc(100% - 12px);
+  font-weight: 600;
+}
+.mapListContainer .mapList .mapsContainer .element .author {
+  position: absolute;
+  color: #a5a5a5;
+  top: 28px;
+  white-space: pre;
+  text-align: center;
+  overflow: hidden;
+  font-size: 11px;
+  width: calc(100% - 12px);
+}
+.mapListContainer .mapList .mapsContainer .element .author:hover {
+  text-decoration: underline;
+}
+.mapListContainer .mapList .mapsContainer .element .votes {
+  position: absolute;
+  color: #a5a5a5;
+  top: 65px;
+  white-space: pre;
+  text-align: center;
+  overflow: hidden;
+  font-size: 11px;
+  width: calc(100% - 12px);
+}
+.mapListContainer .mapList .mapsContainer .element .votes .emoji {
+  display: inline-block;
+  transform: translateY(-1px);
+}
+.mapListContainer .mapList .mapsContainer .element .votes .gap {
+  margin-left: 3px;
+}
+.mapListContainer .mapList .mapsContainer .element .date {
+  position: absolute;
+  color: #a5a5a5;
+  top: 47px;
+  white-space: pre;
+  text-align: center;
+  overflow: hidden;
+  font-size: 11px;
+  width: calc(100% - 12px);
+}
+.mapListContainer .mapList .mapsContainer .element .fav {
+  position: absolute;
+  top: 63px;
+  right: 5px;
+  font-size: 15px;
+  opacity: 0.2;
+}
+.mapListContainer .mapList .mapsContainer .element .fav.favd {
+  opacity: 1;
+}
+.mapListContainer .mapList .mapsContainer .element .descriptionDiv {
+  height: 100px;
+  position: absolute;
+  top: 88px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1%;
+  width: 100%;
+  word-break: break-word;
+  overflow: hidden;
+}
+.mapListContainer .mapList .mapsContainer .element .descriptionDiv:hover {
+  opacity: 100%;
+}
+.mapListContainer .mapList .mapsContainer .element .descriptionDiv span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  background-color: rgba(44, 45, 48, 0.8392156863);
+  font-size: 13px;
+  line-height: 19px;
+  width: 100%;
+}
+.mapListContainer .mapList .mapsContainer .element .plusIcon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50px;
+  top: 53px;
+  pointer-events: none;
+}
+.mapListContainer .mapList .mapsContainer .element .createNewText {
+  position: absolute;
+  top: 108px;
+  text-align: center;
+  font-size: 13px;
+  width: calc(100% - 12px);
+}
+.mapListContainer .mapList .mapsContainer .element .thumb {
+  width: 160px;
+  height: 100px;
+  position: absolute;
+  top: 88px;
+  background-color: #3f4044;
+}
+.mapListContainer .mapList .mapsContainer .element .thumbImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#menuContainer {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#menuContainer #icon {
+  width: 20px;
+  height: 20px;
+  background-color: #55bca4;
+  transform: rotate(-28deg);
+}
+
+.rightClickMenu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.rightClickMenu .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.rightClickMenu .container {
+  position: absolute;
+  left: 0px;
+  top: 28px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  width: -moz-max-content;
+  width: max-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #2b2d31;
+}
+.rightClickMenu .container .item {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #2b2d31;
+  height: 28px;
+  line-height: 28px;
+  color: #ebebeb;
+  font-size: 15px;
+  cursor: pointer;
+}
+.rightClickMenu .container .item:hover {
+  background-color: #323438;
+}
+.rightClickMenu .container .item.disabled {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
+}
+
+.mouseBlockContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.spinner {
+  border: 3px solid rgba(243, 243, 243, 0.4509803922);
+  border-top: 3px solid rgba(218, 218, 218, 0.0901960784);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spinnerAnimation 2s linear infinite;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.knob {
+  position: relative;
+  background-image: url("./graphics/ui/vol1b.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.knob .barSVG {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("./graphics/ui/vol1b-line.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
+.knob .arcSVG {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+
+.knobWithlabel {
+  position: relative;
+  width: 65px;
+  border-radius: 2px;
+  margin-right: 4px;
+  float: right;
+}
+.knobWithlabel .input {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 28px;
+  background: none;
+  border: none;
+  color: #ebebeb;
+  width: 36px;
+  text-align: center;
+  font-size: 10px;
+}
+.knobWithlabel .paramKnob {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 5px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  background: #303030;
+  border: 1px solid #222222;
+}
+.checkbox.checked {
+  background-image: url(graphics/ui/check-light.svg);
+  background-size: contain;
+}
+
+.twoOptionRadio {
+  width: 30px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #d8d8d8;
+  border: 2px solid #4a7ab1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+}
+.twoOptionRadio.disabled {
+  border: 2px solid #838383;
+  cursor: auto;
+}
+.twoOptionRadio .ball {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background-color: #4a7ab1;
+  position: absolute;
+  pointer-events: none;
+}
+.twoOptionRadio .ball.disabled {
+  background-color: #838383;
+}
+
+.tutorialSpeech {
+  position: absolute;
+  bottom: 0;
+  background-image: url("./graphics/ui/tutorialfinished.png");
+}
+
+.inGameCSS {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.inGameCSS .scoresRows {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  gap: 3px;
+}
+.inGameCSS .scoresRows .row {
+  width: 500px;
+  display: flex;
+  gap: 5px;
+}
+.inGameCSS .scoresRows .row .half {
+  width: 50%;
+  display: inline-block;
+}
+.inGameCSS .scoresRows .row .half .nameBackground {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.35);
+  float: right;
+  font-size: 19px;
+  font-weight: 900;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.inGameCSS .scoresRows .row .half .nameBackground .textForFlow {
+  display: inline;
+}
+.inGameCSS .scoresRows .row .half .nameBackground .box {
+  width: 9px;
+  height: 9px;
+  transform: rotate(-28deg);
+  display: inline-block;
+  margin-right: 10px;
+}
+.inGameCSS .scoresRows .row .half .skulls {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.inGameCSS .scoresRows .row .half .skulls .skull {
+  width: 18px;
+  height: 18px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.inGameCSS .winnerNotification {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: none;
+}
+.inGameCSS .winnerNotification .contentsContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.inGameCSS .winnerNotification .contentsContainer .lowerText {
+  text-align: right;
+  position: absolute;
+  bottom: 0px;
+  right: 2%;
+  font-size: 110px;
+  font-weight: 700;
+  color: #dddddd;
+}
+.inGameCSS .winnerNotification .contentsContainer .upperText {
+  text-align: right;
+  right: 2%;
+  bottom: 105px;
+  font-size: 90px;
+  font-weight: 600;
+  color: #dddddd;
+  position: absolute;
+}
+.inGameCSS .winnerNotification .contentsContainer .box {
+  width: 130px;
+  height: 130px;
+  transform: rotate(-28deg);
+  position: absolute;
+  right: 50px;
+  bottom: 200px;
+}
+.inGameCSS .scoreNotification {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 35px;
+  display: none;
+}
+.inGameCSS .scoreNotification .bullseye {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 40px;
+  margin-right: 3px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.inGameCSS .scoreNotification .nametext {
+  color: #fefefe;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  padding-right: 15px;
+  font-weight: 900;
+  font-size: 24px;
+  overflow: hidden;
+}
+.inGameCSS .scoreNotification .nametext span {
+  display: block;
+}
+.inGameCSS .notificationRows {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  gap: 3px;
+}
+.inGameCSS .notificationRows .killNotification {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 35px;
+  visibility: hidden;
+  display: flex;
+}
+.inGameCSS .notificationRows .killNotification .skull {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 35px;
+  margin-right: 3px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.inGameCSS .notificationRows .killNotification .nametext {
+  color: #ef6464;
+  background-color: rgba(0, 0, 0, 0.32);
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  font-weight: 900;
+  font-size: 18px;
+  overflow: hidden;
+}
+.inGameCSS .notificationRows .killNotification .nametext span {
+  display: block;
+}
+.inGameCSS .notificationRows .livesNotification {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 35px;
+  visibility: hidden;
+  display: flex;
+}
+.inGameCSS .notificationRows .livesNotification .heart {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 35px;
+  margin-right: 3px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.inGameCSS .notificationRows .livesNotification .livestext {
+  color: #f7d85e;
+  background-color: rgba(0, 0, 0, 0.32);
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  padding-right: 12px;
+  font-weight: 900;
+  font-size: 18px;
+  overflow: hidden;
+}
+.inGameCSS .notificationRows .livesNotification .livestext span {
+  display: block;
+  text-align: center;
+}
+.inGameCSS .notificationRows .deathNotification {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 35px;
+  visibility: hidden;
+  display: flex;
+}
+.inGameCSS .notificationRows .deathNotification .boxContainer {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 35px;
+  width: 35px;
+  margin-right: 3px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+.inGameCSS .notificationRows .deathNotification .boxContainer .box {
+  width: 18px;
+  height: 18px;
+  transform: rotate(-28deg);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: red;
+}
+.inGameCSS .notificationRows .deathNotification .grave {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 35px;
+  margin-right: 3px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.inGameCSS .notificationRows .deathNotification .killerText {
+  color: #d6d6d6;
+  background-color: rgba(0, 0, 0, 0.32);
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  padding-right: 12px;
+  font-weight: 900;
+  font-size: 18px;
+  overflow: hidden;
+}
+.inGameCSS .notificationRows .deathNotification .killerText span {
+  display: block;
+}
+.inGameCSS .winnerContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.inGameCSS .winnerContainer .text {
+  font-style: italic;
+  font-weight: 900;
+  background: rgba(30, 30, 30, 0.8);
+  font-size: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.inGameCSS .winnerContainer .teamScores {
+  font-size: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  text-align: center;
+  display: none;
+  font-weight: 900;
+  font-size: 30px;
+}
+.inGameCSS .winnerContainer .teamScores .fixed {
+  min-width: 54px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  display: inline-block;
+  font-size: 50px;
+  border-radius: 5px;
+}
+.inGameCSS .winnerContainer .teamScores .red {
+  background: rgb(180, 70, 59);
+}
+.inGameCSS .winnerContainer .teamScores .blue {
+  background: rgb(56, 121, 202);
+}
+.inGameCSS .winnerContainer .teamScores .white {
+  color: #ffffff;
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 50px;
+}
+.inGameCSS .livesNotificationOld {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 20%;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 5px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  font-style: italic;
+  display: none;
+}
+.inGameCSS .livesNotificationOld .top {
+  font-size: 45px;
+}
+.inGameCSS .livesNotificationOld .bottom {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: -5px;
+}
+.inGameCSS .killDeathNotification {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 5px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-weight: 600;
+  font-style: italic;
+  display: none;
+  font-size: 22px;
+}
+.inGameCSS .killDeathNotification.kill {
+  top: 13%;
+}
+.inGameCSS .killDeathNotification.death {
+  top: 20%;
+}
+.inGameCSS .xpNotification {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 20px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-weight: 600;
+  display: none;
+  font-size: 19px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(10, 10, 10, 0);
+  background: linear-gradient(172deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 17%, rgba(0, 0, 0, 0.2) 32%, rgba(0, 0, 0, 0.2) 67%, rgba(0, 0, 0, 0.3) 82%, rgba(0, 0, 0, 0.3) 100%);
+}
+.inGameCSS .xpNotification span {
+  display: block;
+}
+.inGameCSS .matchmakingNotification {
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  position: absolute;
+  left: 2%;
+  top: 7%;
+  display: none;
+}
+
+.scores {
+  font-size: 13px;
+  white-space: pre;
+  margin-top: -35px;
+  font-weight: 900;
+  color: #b6b6b6;
+}
+.scores .title {
+  background-color: rgba(56, 56, 56, 0.35) !important;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.scores .entryContainer {
+  display: inline-block;
+  background-color: rgba(225, 21, 0, 0.2);
+  border-radius: 3px;
+  margin-left: 6px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.scores .entryContainer .number {
+  margin-right: 0px;
+  text-align: right;
+  display: inline-block;
+  padding-right: 4px;
+  font-size: 17px;
+}
+.scores .entryContainer .name {
+  padding-left: 2px;
+  display: inline-block;
+}
+.scores .entryContainer.local {
+  border: 1px solid rgba(255, 255, 255, 0.368627451);
+}
+
+.spectateControls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -40px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 380px;
+  pointer-events: all;
+  font-weight: 900;
+  color: #b6b6b6;
+}
+.spectateControls .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position: 50% 50%;
+}
+.spectateControls .button:hover {
+  background-color: #5c85b4;
+}
+.spectateControls .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.spectateControls .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.spectateControls .button.prev {
+  background-image: url(graphics/ui/chevron_left.svg);
+}
+.spectateControls .button.next {
+  background-image: url(graphics/ui/chevron_right.svg);
+}
+.spectateControls .label {
+  font-size: 13px;
+  background-color: #383838;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 3px;
+  height: 22px;
+  line-height: 22px;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.postGameContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 370px;
+  height: 380px;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  background: #25262a;
+  box-shadow: 0 0 220px 15px #7d7a64;
+  color: #cccccc;
+  border-radius: 7px;
+}
+.postGameContainer .title {
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 40px;
+}
+.postGameContainer .position {
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 90px;
+  font-style: normal;
+}
+.postGameContainer .xpGroup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 155px;
+  width: 275px;
+}
+.postGameContainer .xpGroup .xpGained {
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0px;
+}
+.postGameContainer .xpGroup .barContainer {
+  background-color: #838383;
+  width: 100%;
+  height: 10px;
+  top: 31px;
+  position: absolute;
+}
+.postGameContainer .xpGroup .barContainer .barInner {
+  background-color: #cccccc;
+  height: 100%;
+}
+.postGameContainer .xpGroup .lvNow {
+  font-size: 15px;
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  color: #838385;
+}
+.postGameContainer .xpGroup .lvNext {
+  font-size: 15px;
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  color: #838385;
+}
+.postGameContainer .xpGroup .xpSlash {
+  font-size: 29px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 51px;
+  color: #838385;
+}
+.postGameContainer .voteText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 285px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.postGameContainer .voteContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 30px;
+}
+.postGameContainer .voteContainer .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 100px;
+  font-style: normal;
+  font-weight: 300;
+}
+.postGameContainer .voteContainer .button:hover {
+  background-color: #5c85b4;
+}
+.postGameContainer .voteContainer .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.postGameContainer .voteContainer .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.postGameContainer .closeButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 100px;
+  font-style: normal;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 45px;
+}
+.postGameContainer .closeButton:hover {
+  background-color: #5c85b4;
+}
+.postGameContainer .closeButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.postGameContainer .closeButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.quickMenuContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 258px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  display: none;
+  pointer-events: all;
+}
+.quickMenuContainer .choiceBox {
+  width: 200px;
+  height: 100%;
+  background-color: #25262a;
+  border-radius: 7px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(74, 122, 177, 0.2196078431);
+}
+.quickMenuContainer .choiceBox .title {
+  position: absolute;
+  top: 115px;
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  font-size: 17px;
+}
+.quickMenuContainer .choiceBox .playerCount {
+  position: absolute;
+  top: 140px;
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  font-size: 13px;
+}
+.quickMenuContainer .choiceBox .subtitle {
+  position: absolute;
+  bottom: 12px;
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.031372549);
+  height: 80px;
+}
+.quickMenuContainer .choiceBox .button {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 11px;
+  height: 20px;
+  position: absolute;
+  top: 56px;
+  background-repeat: no-repeat;
+  background-position: 4px;
+  background-size: 4px;
+}
+.quickMenuContainer .choiceBox .button:hover {
+  background-color: #5c85b4;
+}
+.quickMenuContainer .choiceBox .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.quickMenuContainer .choiceBox .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+.quickMenuContainer .choiceBox .button.left {
+  left: 4px;
+  background-image: url(graphics/ui/chevron_left.svg);
+}
+.quickMenuContainer .choiceBox .button.right {
+  right: 4px;
+  background-image: url(graphics/ui/chevron_right.svg);
+}
+.quickMenuContainer .choiceBox .thumb {
+  position: absolute;
+  border: 2px solid #555555;
+  background-color: #555555;
+}
+.quickMenuContainer .choiceBox .thumb.left {
+  width: 80px;
+  height: 50px;
+  top: 40px;
+  left: 20px;
+}
+.quickMenuContainer .choiceBox .thumb.mid {
+  width: 130px;
+  height: 81px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 20px;
+}
+.quickMenuContainer .choiceBox .thumb.right {
+  width: 80px;
+  height: 50px;
+  top: 40px;
+  right: 20px;
+}
+.quickMenuContainer .choiceBox .thumb .thumbImage {
+  width: 100%;
+  height: 100%;
+}
+.quickMenuContainer .returnButton {
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  position: absolute;
+  top: -50px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  background-image: url(graphics/ui/close.svg);
+}
+.quickMenuContainer .returnButton:hover {
+  background-color: #5c85b4;
+}
+.quickMenuContainer .returnButton:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.quickMenuContainer .returnButton.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.phoneSplash {
+  width: 100%;
+  height: 100%;
+  background-color: #2c1f31;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.phoneSplash .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 10%;
+  width: 200px;
+}
+.phoneSplash .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 31%;
+  text-align: center;
+  padding: 50px;
+}
+.phoneSplash .button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 90px;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4a7ab1;
+  color: #ebebeb;
+  border-radius: 2px;
+  top: 70%;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+}
+.phoneSplash .button:hover {
+  background-color: #5c85b4;
+}
+.phoneSplash .button:active {
+  box-shadow: inset 2px 3px 8px -3px rgba(0, 0, 0, 0.5098039216);
+  transform: translateY(1px);
+}
+.phoneSplash .button.disabled {
+  pointer-events: none;
+  cursor: auto;
+  filter: saturate(20%);
+}
+
+.joyArea {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  left: -200px;
+  pointer-events: all;
+}
+.joyArea .bgCircle {
+  background-color: #666666;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+}
+.joyArea .stickCircle {
+  background-color: #995555;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: absolute;
+}
+
+.buttonArea {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  right: -60px;
+  bottom: 0px;
+  pointer-events: all;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(151, 149, 149, 0.92);
+  opacity: 0.5;
+  background-repeat: no-repeat;
+}
+.buttonArea:active {
+  opacity: 0.8;
+}
+.buttonArea.bat {
+  background-image: url(graphics/ui/touch_bat.svg);
+  background-size: 70%;
+  background-position: center center;
+}
+.buttonArea.rocket {
+  background-image: url(graphics/ui/touch_rocket.svg);
+  background-size: 70%;
+  transform: rotate(45deg);
+  background-position: center center;
+}
+.buttonArea.push {
+  background-image: url(graphics/ui/touch_push.svg);
+  background-position: center center;
+  background-size: 70%;
+  transform: rotate(45deg);
+}
+
+@keyframes spinnerAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinnerHideText {
+  color: rgba(0, 0, 0, 0) !important;
+  pointer-events: none;
+  cursor: default;
+}
+
+.reinvented-color-wheel,
+.reinvented-color-wheel--hue-handle,
+.reinvented-color-wheel--hue-wheel,
+.reinvented-color-wheel--sv-handle,
+.reinvented-color-wheel--sv-space {
+  touch-action: manipulation;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.reinvented-color-wheel {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+.reinvented-color-wheel--hue-wheel {
+  border-radius: 50%;
+}
+
+.reinvented-color-wheel--sv-space {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.reinvented-color-wheel--hue-handle,
+.reinvented-color-wheel--sv-handle {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #000 inset;
+}
+
+.reinvented-color-wheel--hue-handle {
+  pointer-events: none;
+}/*# sourceMappingURL=test.css.map */
